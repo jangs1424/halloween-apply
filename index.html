@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>할로윈 축제 · 참가 신청</title>
+<style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;padding:28px;background:#111018;color:#f7f3eb}main{width:100%;max-width:480px;padding:48px 32px;border:1px solid #37313d;border-radius:24px;background:#19161f;text-align:center}.tag{color:#ffb66f;font-size:12px;letter-spacing:.18em;font-weight:700}.symbol{font-size:52px;margin:28px 0 18px}h1{font-size:clamp(25px,6vw,34px);letter-spacing:-.05em;margin:0 0 18px;line-height:1.3}p{color:#c9c1ce;line-height:1.8;font-size:16px;margin:0;word-break:keep-all}a,button{display:inline-block;margin-top:28px;padding:15px 24px;background:#ffb66f;color:#20130a;border:0;border-radius:12px;text-decoration:none;font:inherit;font-weight:700;cursor:pointer}[hidden]{display:none!important}.footer{margin-top:32px;font-size:12px;color:#938a9b}
+</style>
+</head>
+<body>
+<main>
+<div class="tag">HALLOWEEN FESTIVAL</div>
+<div class="symbol" aria-hidden="true">✦</div>
+<div role="status" aria-live="polite"><h1 id="title">신청 안내를 확인하고 있어요</h1><p id="message">잠시만 기다려 주세요.</p></div>
+<a id="apply" hidden rel="noopener">신청폼 열기</a>
+<button id="retry" hidden type="button" onclick="location.reload()">다시 확인하기</button>
+<noscript><p>신청 안내를 보려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+<div class="footer">할로윈 축제 · 참가 신청</div>
+</main>
+<script>
+(async () => {
+const title=document.getElementById('title');
+const message=document.getElementById('message');
+const apply=document.getElementById('apply');
+const retry=document.getElementById('retry');
+try {
+ const response=await fetch('./config.json?t='+Date.now(),{cache:'no-store'});
+ if(!response.ok) throw new Error('Configuration unavailable');
+ const config=await response.json();
+ if(typeof config.destinationUrl!=='string') throw new Error('Invalid configuration');
+ const destination=config.destinationUrl.trim();
+ if(!destination){
+  title.textContent='신청 준비 중입니다';
+  message.textContent='신청 페이지가 곧 열립니다. 나중에 이 QR코드로 다시 방문해 주세요.';
+  return;
+ }
+ const url=new URL(destination);
+ if(url.protocol!=='https:' || url.username || url.password || (url.origin===location.origin && url.pathname.replace(/\/index\.html$/,'/').replace(/\/$/,'')===location.pathname.replace(/\/index\.html$/,'/').replace(/\/$/,''))) throw new Error('Invalid destination');
+ apply.href=url.href; apply.hidden=false;
+ title.textContent='신청폼으로 이동합니다';
+ message.textContent='자동으로 이동하지 않으면 아래 버튼을 눌러 주세요.';
+ location.replace(url.href);
+} catch(error) {
+ title.textContent='안내를 불러오지 못했어요';
+ message.textContent='잠시 후 다시 확인해 주세요.';
+ retry.hidden=false;
+}
+})();
+</script>
+</body>
+</html>
