@@ -7,8 +7,8 @@
 <meta name="robots" content="noindex">
 <title>기기괴담 — 10월 13일 오후 7시 신청 오픈</title>
 <style>
-@font-face{font-family:"InvitationSerif";font-style:normal;font-weight:500;font-display:swap;src:url("./assets/fonts/invitation-serif.ttf") format("truetype")}
-@font-face{font-family:"InvitationSans";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/invitation-sans.ttf") format("truetype")}
+@font-face{font-family:"InvitationSerif";font-style:normal;font-weight:500;font-display:swap;src:url("./assets/fonts/invitation-serif.ttf?v=undefinedscene") format("truetype")}
+@font-face{font-family:"InvitationSans";font-style:normal;font-weight:400;font-display:swap;src:url("./assets/fonts/invitation-sans.ttf?v=undefinedscene") format("truetype")}
 @font-face{font-family:"InvitationDisplay";font-style:normal;font-weight:500;font-display:swap;src:url("./assets/fonts/invitation-display.ttf") format("truetype")}
 
 :root{color-scheme:dark;--backdrop:#1b1014;--paper:#351d25;--ink:#f0ddce;--accent:#a54a51;--muted:#c19e99;font-family:"InvitationSans","Apple SD Gothic Neo",sans-serif;font-synthesis:none}
@@ -22,7 +22,6 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #e9
 .envelope-back{position:absolute;inset:auto 0 0;height:320px;background:#2b0c14;clip-path:polygon(0 12%,50% 0,100% 12%,100% 100%,0 100%)}
 .paper{position:relative;z-index:1;margin:0 30px;padding:39px 42px 108px;background:linear-gradient(135deg,#40232c,var(--paper) 55%,#301920);text-align:center;box-shadow:0 -1px 12px #0e03084d;border:1px solid #9f6b663b}
 .paper:before{content:"";position:absolute;inset:13px;border:1px solid #d9a18c26;pointer-events:none}
-.botanical{display:block;width:57px;height:65px;margin:0 auto 19px;color:#c38c83}
 .kicker{margin:0;font:500 46px/1.1 "InvitationDisplay",Georgia,serif;letter-spacing:.025em;color:#f5dfca}
 h1{font-family:"InvitationSerif",serif;font-size:19px;font-weight:500;letter-spacing:-.04em;margin:14px 0 0;line-height:1.6;word-break:keep-all}
 .intro{font-family:"InvitationSerif",serif;font-weight:500;font-size:14px;line-height:1.95;margin:28px 0 0;word-break:keep-all}
@@ -45,14 +44,14 @@ h1{font-family:"InvitationSerif",serif;font-size:19px;font-weight:500;letter-spa
 .secondary{background:transparent;color:var(--ink)}
 .secondary:hover{background:#68343d}
 .signature{margin:28px 0 0;font:500 13px/1.5 "InvitationSerif",serif;letter-spacing:.08em;color:#d4afa4}
-.signature strong{font-family:"InvitationDisplay",Georgia,serif;font-size:18px;font-weight:500;letter-spacing:.05em}
+.signature strong{font-family:"InvitationSerif",serif;font-size:15px;font-weight:500;letter-spacing:.025em}
 .envelope-sides{position:absolute;z-index:2;inset:auto 0 0;height:255px;background:linear-gradient(110deg,#672734,#441521);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%)}
 .envelope-front{position:absolute;z-index:3;inset:auto 0 0;height:200px;background:linear-gradient(150deg,#622633,#4d1725);clip-path:polygon(0 100%,50% 0,100% 100%)}
 .envelope-front:before,.envelope-front:after{content:"";position:absolute;bottom:0;width:65%;height:1px;background:#26050f66;transform-origin:left bottom;transform:rotate(-33deg)}
 .envelope-front:after{right:0;transform-origin:right bottom;transform:rotate(33deg)}
 .seal{position:absolute;z-index:4;width:77px;height:77px;left:50%;bottom:162px;transform:translateX(-50%) rotate(-9deg);border-radius:48% 51% 47% 49%;display:grid;place-items:center;background:radial-gradient(ellipse at 34% 25%,#d8645c 0,#a42e39 48%,#6e1728 85%);box-shadow:inset 2px 3px 2px #edaaa581,inset -2px -3px 3px #420919b8,0 4px 8px #12020aaa;border:1px solid #ac4550}
 .seal:before{content:"";position:absolute;inset:7px;border:1px solid #ec8e879e;border-radius:50%;box-shadow:inset 1px 2px 3px #591522a0,0 1px 1px #fca09a68}
-.seal span{font:500 33px "InvitationDisplay",Georgia,serif;color:#711b2b;text-shadow:0 1px 0 #e0817c;transform:rotate(9deg)}
+.seal span{font:500 23px "InvitationSerif",serif;color:#711b2b;text-shadow:0 1px 0 #e0817c;transform:rotate(9deg)}
 .below{text-align:center;margin:26px auto 0;max-width:480px;color:#c7a6a2;font-size:11px}
 .event-line{margin:0 0 16px;line-height:1.8}
 details{border-top:1px solid #dba8a12b;padding-top:14px;text-align:left}
@@ -61,7 +60,7 @@ summary::-webkit-details-marker{display:none}
 summary:after{content:"+";font-size:18px;font-weight:300}
 details[open] summary:after{content:"−"}
 details p{font-size:11px;line-height:1.9;margin:13px 0 0;word-break:keep-all}
-footer{margin-top:25px;text-align:center;font:500 11px "InvitationDisplay",Georgia,serif;letter-spacing:.15em;color:#ba9390}
+footer{margin-top:25px;text-align:center;font:400 10px "InvitationSans",sans-serif;letter-spacing:.04em;color:#ba9390}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .error{color:#efb3a9}
 .opened .count-label{font-size:14px;margin-top:22px;color:var(--ink)}
@@ -70,7 +69,6 @@ noscript p{font-size:12px;line-height:1.7}
  .page{padding:32px 17px 25px;max-width:460px}
  .invitation{padding-bottom:106px}
  .paper{margin:0 17px;padding:28px 22px 92px}
- .botanical{width:44px;height:51px;margin-bottom:17px}
  .kicker{font-size:36px}
  h1{font-size:16px;margin-top:12px}
  .intro{font-size:13px;margin-top:23px;line-height:1.95}
@@ -81,9 +79,9 @@ noscript p{font-size:12px;line-height:1.7}
  .count-label{margin-top:23px}.countdown{gap:16px;margin-top:9px}.countdown strong{font-size:26px}
  .waiting{font-size:10px;margin-top:19px}.note{font-size:10px;margin-top:10px}.fine-print{font-size:10px}
  .signature{margin-top:22px;font-size:12px}
- .signature strong{font-size:17px}
+ .signature strong{font-size:14px}
  .envelope-back{height:244px}.envelope-sides{height:190px}.envelope-front{height:143px}
- .seal{width:62px;height:62px;bottom:112px}.seal span{font-size:25px}.seal:before{inset:6px}
+ .seal{width:62px;height:62px;bottom:112px}.seal span{font-size:20px}.seal:before{inset:6px}
  .below{margin-top:22px;padding-inline:13px}
 }
 @media(max-width:350px){.page{padding:25px 12px 20px}.paper{margin-inline:13px;padding-inline:14px}.kicker{font-size:31px}h1{font-size:14px}.intro{font-size:12px}.countdown{gap:13px}}
@@ -94,12 +92,6 @@ noscript p{font-size:12px;line-height:1.7}
 <div class="invitation">
 <div class="envelope-back" aria-hidden="true"></div>
 <section class="paper" aria-label="기기괴담 참가 신청 초대장">
-<svg class="botanical" viewBox="0 0 70 80" fill="none" stroke="currentColor" stroke-width=".95" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-<path d="M42 75C34 61 33 45 34 29M34 54C23 48 17 40 12 28M34 45C44 40 52 38 59 39M36 63C44 61 49 57 53 53"/>
-<path d="M32 47C13 46 8 34 9 21C24 24 30 35 32 47ZM11 24C19 31 26 39 32 47M35 44C40 31 50 31 63 35C55 44 45 48 35 44ZM39 43L59 36M36 63C38 51 48 49 58 51C53 60 47 65 36 63ZM38 62L54 53"/>
-<path d="M34 30C23 28 21 23 25 17C22 12 25 8 30 9C31 3 36 3 40 8C46 6 49 10 47 15C53 18 49 24 45 26C43 31 37 32 34 30ZM34 26C29 21 27 16 31 13C34 8 40 12 39 16C45 17 43 23 38 25ZM33 20C36 22 39 19 38 16M27 25C31 28 39 29 44 24M35 30L34 35"/>
-<circle cx="53" cy="25" r="1.4"/><circle cx="20" cy="56" r="1.2"/><path d="M49 68h4M51 66v4"/>
-</svg>
 <p class="kicker">INVITATION</p>
 <h1>기기괴담 : 동아리 실종사건</h1>
 <p class="intro">10월의 마지막 밤,<br>당신을 미스터리 속으로 초대합니다.</p>
@@ -116,12 +108,12 @@ noscript p{font-size:12px;line-height:1.7}
 <p class="note" id="note" role="status">회차별 16명 선착순 · 조기 마감될 수 있습니다.</p>
 <p class="fine-print">미성년자 포함 1인 1신청 · 한국시간 기준</p>
 <noscript><p>신청 버튼을 보려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
-<p class="signature"><strong>UNNLY</strong> 드림</p>
+<p class="signature"><strong>언디파인드씬</strong> 드림</p>
 </section>
-<div class="envelope-sides" aria-hidden="true"></div><div class="envelope-front" aria-hidden="true"></div><div class="seal" aria-hidden="true"><span>U</span></div>
+<div class="envelope-sides" aria-hidden="true"></div><div class="envelope-front" aria-hidden="true"></div><div class="seal" aria-hidden="true"><span>씬</span></div>
 </div>
 <div class="below"><p class="event-line">2026년 10월 31일 · 공주 청년센터 집결</p><details><summary>신청 전 안내</summary><p>신청은 2026년 10월 13일(화) 오후 7시(한국시간)에 열립니다.<br>이 화면을 미리 방문해도 대기 순번은 부여되지 않습니다. 오픈 후 신청서 제출을 완료한 순서로 접수됩니다.<br><br>미성년자를 포함해 실제 참가자 1명당 신청서 1건을 제출해 주세요. 함께 참가하려면 같은 회차를 선택해 주세요.</p></details></div>
-<footer>© UNNLY 2026</footer>
+<footer>© 언디파인드씬 2026</footer>
 </main>
 <script>
 (async () => {
